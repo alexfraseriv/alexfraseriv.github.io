@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 24px 10px;
+            background: url('/assets/images/header-background.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        header h1,
+        header p,
+        header .contact,
+        .menu-icon,
+        .attribution {
+            position: relative;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        header p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        header .contact {
+            margin-top: 10px;
+            font-size: 0.8em;
+        }
+
+        header .contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .attribution {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 8px;
+            color: #ccc;
+            font-style: italic;
+        }
+
+        .attribution a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .attribution a:hover {
+            text-decoration: underline;
+        }
+
+        /* Menu Icon */
+        .menu-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            background: none;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            width: 200px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            z-index: 10;
+        }
+
+        .nav-menu.active {
+            display: block;
+        }
+
+        .nav-menu li {
+            margin: 5px 0;
+            position: relative;
+        }
+
+        .nav-menu li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            padding: 5px;
+        }
+
+        .nav-menu li a:hover {
+            text-decoration: underline;
+            background-color: #f4f4f4;
+        }
+
+        /* Submenu Styling */
+        .nav-menu li ul {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            width: 200px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 10px;
+            margin: 0;
+            z-index: 10;
+        }
+
+        .nav-menu li:hover ul {
+            display: block;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 10px;
+            }
+
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            header p {
+                font-size: 0.8em;
+            }
+
+            .nav-menu {
+                width: 150px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.4em;
+            }
+
+            header p {
+                font-size: 0.7em;
+            }
+
+            .nav-menu {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="menu-icon" onclick="toggleMenu()">☰</button>
+        <h1>Alex Fraser</h1>
+        <div class="contact">
+            <a href="mailto:alex.fraser.iv@gmail.com">alex.fraser.iv@gmail.com</a> |
+            <a href="https://www.linkedin.com/in/alex-fraser" target="_blank">LinkedIn</a>
+        </div>
+
+        <!-- Attribution -->
+        <div class="attribution">
+            <a href="https://tse2.mm.bing.net/th?id=OIP.4NfXbfOfm3QxaQQd3eEkvwHaEo&pid=Api" target="_blank"
+                rel="noopener noreferrer">
+                Image Source
+            </a>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/cv/">CV</a></li>
+            <li>
+                <a href="/projects/">Projects</a>
+                <ul>
+                    <li><a href="/projects/frasernaeum/">Frasernaeum</a></li>
+                    <li><a href="/projects/rcfm/">RCFM</a></li>
+                    <li><a href="/projects/dcab_bot/">DCA Buyer Bot</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
