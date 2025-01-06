@@ -1,0 +1,16 @@
+title: Alex Fraser
+description: A portfolio showcasing my projects and cv.
+baseurl: "" # Leave blank unless hosted in a subdirectory
+url: "http://localhost:4000" # Localhost URL
+theme: minima
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "CV"
+    url: "/cv/"
+  - title: "Projects"
+    url: "/projects/"
+
+collections:
+  pages:
+    output: true
