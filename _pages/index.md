@@ -1,20 +1,7 @@
 ---
-layout: default
-title: "Alex Fraser - Portfolio"
+layout: home
+title: "Alex Fraser — Builder, PM, AI Product"
+description: "Alex Fraser builds focused web and mobile apps. AI tooling, sports analytics, golf coaching, and everyday-life utilities."
 permalink: /
+no_prose: true
 ---
-
-Welcome to my portfolio! Here, you’ll find a collection of my professional work, projects, and my CV. Click the links below to explore more about me and what I’ve been working on.
-
-## Curriculum Vitae
-Discover my professional experience, education, and skills in [my CV](/cv/)
-
-## Projects
-Explore my technical and creative projects below.
-
-{% include projects-list.html %}
-
-## Tools
-Small interactive utilities you can use right in your browser.
-
-{% include tools-list.html %}

@@ -2,26 +2,26 @@
 layout: default
 title: "Frasernaeum"
 permalink: /projects/frasernaeum/
+description: "Personal library management and pricing tool powered by multi-modal generative AI."
 ---
 
 # Frasernaeum
 
-**A personal library management and pricing tool powered by multi-modal generative models.**
+**A personal library management and pricing tool powered by multi-modal generative AI.**
 
 ---
 
-## **Overview**
-Frasernaeum helps users manage their personal book collections. By leveraging multi-modal generative AI, Frasernaeum simplifies cataloging, provides real-time market pricing, and offers insights into book valuation trends.
+## Status
 
----
+Active R&D — not yet publicly deployed. This page exists so the legacy /projects/frasernaeum/ route keeps resolving.
 
-## **Key Features**
-- **AI-Powered Cataloging:** Automatically scans and categorizes books using their cover images and metadata.
-- **Market Pricing Insights:** Tracks real-time book valuations and suggests optimal selling prices.
-- **Customizable Reports:** Generate insights on collection worth, genre breakdown, and acquisition history.
-- **Interactive Dashboard:** Intuitive interface for browsing and managing your collection.
+## Overview
 
----
+Frasernaeum is a personal-library tool: scan a shelf, cover by cover, and get back a clean catalog with real-time market pricing. The hard part isn't the database — it's letting a multi-modal model do the cataloging without making the user babysit every guess.
 
-## **Current Status**
-Frasernaeum is actively under development. 
+## Key features
+
+- **AI-powered cataloging:** auto-detect title, author, edition, and condition from a phone-camera image of the cover.
+- **Market pricing:** pull live valuations and suggest selling prices when you list.
+- **Collection insights:** value by genre, acquisition history, and trendlines for the long-tail collector.
+- **Interactive dashboard:** browse, edit, and prune the catalog without thinking about the model.
