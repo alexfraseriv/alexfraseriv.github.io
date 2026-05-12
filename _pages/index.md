@@ -13,3 +13,8 @@ Discover my professional experience, education, and skills in [my CV](/cv/)
 Explore my technical and creative projects below.
 
 {% include projects-list.html %}
+
+## Tools
+Small interactive utilities you can use right in your browser.
+
+{% include tools-list.html %}
