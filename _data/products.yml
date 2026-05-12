@@ -1,0 +1,31 @@
+live:
+  - name: "Swing Compare"
+    glyph: "⛳"
+    description: "Mobile-first PWA for synced side-by-side golf swing comparison — up to 4 videos in a 2×2 grid, with two-finger angle-line drawing, impact-aligned playback, and a shareable swing library. Built for iPhone Safari first."
+    tags: ["Next.js", "Supabase", "PWA", "iOS Safari"]
+    url: "https://swingcompare.vercel.app"
+
+  - name: "theForm"
+    glyph: "⚽"
+    description: "Cross-platform sports league app for the RCFM crew. Logs FIFA/EA FC games, tracks deep player stats (1v1 vs 2v2, head-to-head, club performance), and uses Gemini to auto-generate goal highlights from YouTube uploads."
+    tags: ["Flutter", "Firebase", "Supabase", "Gemini"]
+    url: "https://theform-6bea6.web.app"
+
+  - name: "BMW TCO Calculator"
+    glyph: "🚗"
+    description: "Side-by-side 3-year total cost of ownership for a 2026 BMW 430i lease vs Hyundai IONIQ 6 / Polestar 3. Editable driving profile, gas/electric scenarios, cumulative-cost chart, and share-links that bake in your custom inputs."
+    tags: ["React", "Vite", "Tailwind", "GitHub Pages"]
+    url: "https://alexfraseriv.github.io/bmw-tco-calculator/"
+    repo: "https://github.com/alexfraseriv/bmw-tco-calculator"
+
+wip:
+  - name: "ClipCamel"
+    glyph: "🎬"
+    description: "Multi-agent AI pipeline that watches a YouTube/Twitch stream and returns a JSON of clickable timestamps for every goal, card, and key moment. GPU-accelerated on Modal; powers theForm's highlight generation under the hood."
+    tags: ["Python", "Modal", "Gemini", "Supabase"]
+
+  - name: "RCFM"
+    glyph: "🏆"
+    description: "Rose City Friendly Manager — the original IRL-friend competition tracker. Spiritual ancestor of theForm; the React/Next rewrite has been folded into theForm above."
+    tags: ["Legacy", "Replaced by theForm"]
+    url: "/projects/rcfm/"

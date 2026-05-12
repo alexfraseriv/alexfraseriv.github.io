@@ -1,18 +1,21 @@
 title: Alex Fraser
-description: A portfolio showcasing my projects and cv.
-baseurl: "" # Leave blank unless hosted in a subdirectory
-url: "http://localhost:4000" # Localhost URL
+description: Alex Fraser builds focused web and mobile apps. AI tooling, sports analytics, golf coaching, and everyday-life utilities.
+baseurl: ""
+url: "https://www.alexfraser.com"
 theme: minima
 nav:
-  - title: "Home"
+  - title: "Work"
     url: "/"
   - title: "CV"
     url: "/cv/"
   - title: "Projects"
     url: "/projects/"
-  - title: "Tools"
-    url: "/tools/"
 
 collections:
   pages:
     output: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
