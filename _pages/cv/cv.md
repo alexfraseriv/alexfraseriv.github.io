@@ -2,6 +2,7 @@
 layout: default
 title: "Curriculum Vitae"
 permalink: /cv/
+description: "Alex Fraser's CV — Director of AI at Nightingale Technology, formerly Senior PM at athenahealth."
 ---
 
 # Curriculum Vitae

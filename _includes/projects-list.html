@@ -1,40 +1,107 @@
-<div class="projects-container">
-    <ul>
-        <li>
-            <a href="/projects/dcab_bot/">DCA Buyer Bot</a> - A bot that automates Dollar Cost Averaging (DCA) for consistent
-            investing. Coming soon!
-        </li>
-        <li>
-            <a href="/projects/frasernaeum/">Frasernaeum</a> - A personal library management and pricing tool powered by multi-modal generative models. Coming soon!
-        </li>
-        <li>
-            <a href="/projects/rcfm/">RCFM</a> - A tool to facilitate competition amongst IRL friends. Coming soon!
-        </li>
-    </ul>
-</div>
-
 <style>
-    .projects-container ul {
-        list-style-type: disc;
-        /* Standard bullet points */
-        margin: 20px 0;
-        padding-left: 20px;
+    .projects-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        margin: 24px 0 40px;
     }
-
-    .projects-container li {
-        margin-bottom: 10px;
-        /* Adds spacing between list items */
-        font-size: 1em;
-        line-height: 1.5em;
+    .proj-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 22px;
+        transition: transform 0.18s ease, border-color 0.18s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
-
-    .projects-container li a {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
+    .proj-card:hover {
+        transform: translateY(-2px);
+        border-color: var(--border-strong);
     }
-
-    .projects-container li a:hover {
-        text-decoration: underline;
+    .proj-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
+    .proj-glyph {
+        font-size: 22px;
+    }
+    .proj-title {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: var(--fg);
+        margin: 0;
+        flex: 1;
+    }
+    .proj-tag {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10.5px;
+        padding: 2px 7px;
+        border-radius: 4px;
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+    }
+    .proj-tag.live { color: #34d399; border-color: rgba(52, 211, 153, 0.3); background: rgba(52, 211, 153, 0.08); }
+    .proj-tag.wip { color: #fbbf24; border-color: rgba(251, 191, 36, 0.3); background: rgba(251, 191, 36, 0.08); }
+    .proj-desc {
+        color: var(--fg-muted);
+        font-size: 14px;
+        line-height: 1.55;
+        margin: 0;
+        flex: 1;
+    }
+    .proj-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .proj-actions a {
+        font-size: 12.5px;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 5px;
+        background: var(--accent);
+        color: var(--accent-fg);
+    }
+    .proj-actions a:hover { background: #ffbe44; color: var(--accent-fg); }
+    .proj-actions a.secondary {
+        background: transparent;
+        color: var(--fg-muted);
+        border: 1px solid var(--border-strong);
+    }
+    .proj-actions a.secondary:hover { background: var(--bg-elev); color: var(--fg); }
 </style>
+
+<div class="projects-grid">
+{% for p in site.data.products.live %}
+    <article class="proj-card">
+        <div class="proj-head">
+            <span class="proj-glyph">{{ p.glyph }}</span>
+            <h3 class="proj-title">{{ p.name }}</h3>
+            <span class="proj-tag live">LIVE</span>
+        </div>
+        <p class="proj-desc">{{ p.description }}</p>
+        <div class="proj-actions">
+            <a href="{{ p.url }}" target="_blank" rel="noopener">Open ↗</a>
+            {% if p.repo %}<a href="{{ p.repo }}" class="secondary" target="_blank" rel="noopener">GitHub</a>{% endif %}
+        </div>
+    </article>
+{% endfor %}
+{% for p in site.data.products.wip %}
+    <article class="proj-card">
+        <div class="proj-head">
+            <span class="proj-glyph">{{ p.glyph }}</span>
+            <h3 class="proj-title">{{ p.name }}</h3>
+            <span class="proj-tag wip">WIP</span>
+        </div>
+        <p class="proj-desc">{{ p.description }}</p>
+        {% if p.url or p.repo %}
+        <div class="proj-actions">
+            {% if p.url %}<a href="{{ p.url }}" class="secondary">Details</a>{% endif %}
+            {% if p.repo %}<a href="{{ p.repo }}" class="secondary" target="_blank" rel="noopener">GitHub</a>{% endif %}
+        </div>
+        {% endif %}
+    </article>
+{% endfor %}
+</div>
