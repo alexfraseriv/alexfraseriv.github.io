@@ -4,7 +4,7 @@ baseurl: ""
 url: "https://www.alexfraser.com"
 theme: minima
 nav:
-  - title: "Work"
+  - title: "About"
     url: "/"
   - title: "CV"
     url: "/cv/"
