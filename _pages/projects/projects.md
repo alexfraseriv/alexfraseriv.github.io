@@ -15,7 +15,6 @@ Everything I'm currently shipping or actively building. Live products link out t
 
 ## Earlier work
 
-- [BMW TCO Calculator](/projects/bmw-tco/) — 2026 BMW 430i vs EV total-cost-of-ownership tool. ([live](https://alexfraseriv.github.io/bmw-tco-calculator/))
+- [Car cost compare](/projects/car-cost-compare/) — side-by-side 3-year cost-of-ownership for any cars (lease, loan, or keep-current). ([live](https://alexfraseriv.github.io/car-cost-compare/))
 - [Frasernaeum](/projects/frasernaeum/) — multi-modal AI personal library / book pricing.
-- [RCFM](/projects/rcfm/) — the original IRL-friendship leaderboard. Folded into [theForm](https://theform-6bea6.web.app).
 - [DCA Buyer Bot](/projects/dcab_bot/) — automated dollar-cost-averaging bot prototype.
