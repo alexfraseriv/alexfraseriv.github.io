@@ -3,24 +3,12 @@ layout: default
 ---
 <style>
     /* ===== HERO =====
-       Refined editorial minimalism. The header brand mark + URL already
-       carry identity, so the hero leads with the actual message at a
-       restrained size — no display-scale flourish. A thin top rule + a
-       single mono-italic word ("tools") give it a typographic spine
-       without shouting. Tight bottom padding so the product grid sits
-       at the fold on phones. */
+       Plain. Header brand + URL already carry identity, so the hero
+       leads with the message at a restrained size — no rules, no
+       accents, no flourish. Tight bottom padding so the product grid
+       sits at the fold on phones. */
     .hero {
         padding: 24px 0 36px;
-        position: relative;
-    }
-    .hero::before {
-        content: '';
-        display: block;
-        width: 48px;
-        height: 1px;
-        background: var(--accent);
-        margin-bottom: 28px;
-        opacity: 0.85;
     }
     .hero h1 {
         font-size: clamp(1.4rem, 3.2vw, 2.1rem);
@@ -31,17 +19,8 @@ layout: default
         max-width: 38ch;
         color: var(--fg);
     }
-    .hero h1 em {
-        font-family: 'JetBrains Mono', monospace;
-        font-style: normal;
-        font-weight: 500;
-        color: var(--accent);
-        font-size: 0.92em;
-        padding: 0 0.05em;
-    }
     @media (min-width: 768px) {
         .hero { padding: 36px 0 48px; }
-        .hero::before { width: 56px; margin-bottom: 32px; }
     }
     .hero-ctas {
         display: flex;
@@ -257,7 +236,7 @@ layout: default
 </style>
 
 <section class="hero">
-    <h1>I build and use <em>tools</em> to solve problems.</h1>
+    <h1>I build and use tools to solve problems.</h1>
     <div class="hero-ctas">
         <a href="#products" class="btn btn-primary">See the apps →</a>
         <a href="/cv/" class="btn btn-ghost">Read my CV</a>
