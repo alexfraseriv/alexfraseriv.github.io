@@ -1,7 +1,7 @@
 live:
   - name: "Swing Compare"
     glyph: "⛳"
-    description: "Mobile-first PWA for synced side-by-side golf swing comparison — up to 4 videos in a 2×2 grid, with two-finger angle-line drawing, impact-aligned playback, and a shareable swing library. Built for iPhone Safari first."
+    description: "Mobile-first PWA for synced golf swing comparison — two swings stacked vertically with shared playback, per-swing frame-by-frame stepping, ruler-mode two-finger angle-line drawing, and a shareable swing library. Built for iPhone Safari first."
     tags: ["Next.js", "Supabase", "PWA", "iOS Safari"]
     url: "https://swingcompare.vercel.app"
 
