@@ -7,9 +7,9 @@ live:
 
   - name: "theForm"
     glyph: "⚽"
-    description: "Cross-platform sports league app for the RCFM crew. Logs FIFA/EA FC games, tracks deep player stats (1v1 vs 2v2, head-to-head, club performance), and uses Gemini to auto-generate goal highlights from YouTube uploads."
-    tags: ["Flutter", "Firebase", "Supabase", "Gemini"]
-    url: "https://theform-6bea6.web.app"
+    description: "iOS and cross-platform Flutter app for sports leagues. Logs FIFA/EA FC games, tracks deep player stats (1v1 vs 2v2, head-to-head, club performance), and uses Gemini to auto-generate goal highlights from YouTube uploads."
+    tags: ["iOS", "Flutter", "Firebase", "Supabase", "Gemini"]
+    url: "https://youintheform.com"
 
   - name: "Car cost compare"
     glyph: "🚗"
