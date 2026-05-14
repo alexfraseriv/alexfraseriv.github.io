@@ -2,50 +2,46 @@
 layout: default
 ---
 <style>
-    /* ===== HERO ===== */
+    /* ===== HERO =====
+       Refined editorial minimalism. The header brand mark + URL already
+       carry identity, so the hero leads with the actual message at a
+       restrained size — no display-scale flourish. A thin top rule + a
+       single mono-italic word ("tools") give it a typographic spine
+       without shouting. Tight bottom padding so the product grid sits
+       at the fold on phones. */
     .hero {
-        padding: 28px 0 56px;
+        padding: 24px 0 36px;
+        position: relative;
     }
-    .hero-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 12px;
-        color: var(--fg-muted);
-        background: var(--bg-elev);
-        border: 1px solid var(--border);
-        padding: 6px 12px;
-        border-radius: 999px;
-        margin-bottom: 22px;
-    }
-    .hero-eyebrow::before {
+    .hero::before {
         content: '';
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: #34d399;
-        box-shadow: 0 0 12px #34d399aa;
+        display: block;
+        width: 48px;
+        height: 1px;
+        background: var(--accent);
+        margin-bottom: 28px;
+        opacity: 0.85;
     }
     .hero h1 {
-        font-size: clamp(2.5rem, 7vw, 4.25rem);
-        font-weight: 700;
-        line-height: 1.02;
-        letter-spacing: -0.035em;
-        margin: 0 0 20px;
+        font-size: clamp(1.4rem, 3.2vw, 2.1rem);
+        font-weight: 500;
+        line-height: 1.25;
+        letter-spacing: -0.015em;
+        margin: 0 0 28px;
+        max-width: 38ch;
         color: var(--fg);
     }
-    .hero h1 .accent {
+    .hero h1 em {
+        font-family: 'JetBrains Mono', monospace;
+        font-style: normal;
+        font-weight: 500;
         color: var(--accent);
-        font-style: italic;
-        font-weight: 700;
+        font-size: 0.92em;
+        padding: 0 0.05em;
     }
-    .hero-sub {
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        color: var(--fg-muted);
-        max-width: 620px;
-        margin: 0 0 32px;
-        line-height: 1.55;
+    @media (min-width: 768px) {
+        .hero { padding: 36px 0 48px; }
+        .hero::before { width: 56px; margin-bottom: 32px; }
     }
     .hero-ctas {
         display: flex;
@@ -261,8 +257,7 @@ layout: default
 </style>
 
 <section class="hero">
-    <h1><span class="accent">Alex Fraser</span></h1>
-    <p class="hero-sub">I build and use tools to solve problems.</p>
+    <h1>I build and use <em>tools</em> to solve problems.</h1>
     <div class="hero-ctas">
         <a href="#products" class="btn btn-primary">See the apps →</a>
         <a href="/cv/" class="btn btn-ghost">Read my CV</a>
@@ -303,7 +298,7 @@ layout: default
 <section class="section">
     <div class="section-head">
         <h2 class="section-title"><span class="label">02</span>In progress</h2>
-        <p class="section-sub">Building in public — not deployed yet.</p>
+        <p class="section-sub">Not deployed yet.</p>
     </div>
     <div class="grid">
         {% for product in site.data.products.wip %}
